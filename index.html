@@ -8,16 +8,17 @@
 </head>
 <body>
 
-<header>
-    <h1>Meet Our Team</h1>
-    <!-- Example team logo -->
-    <img src="img/team-logo.png" alt="Team Logo" class="team-logo">
+<header class="site-header">
+    <div class="header-content">
+        <img src="img/mammoth.png" alt="Mammoth Logo" class="mammoth-logo">
 
-    <!-- Navigation menu to switch between sections -->
-    <nav>
-        <button onclick="showSection('bios')">Team Bios</button>
-        <button onclick="showSection('vision')">Team Vision</button>
-    </nav>
+        <h1>Meet Our Team</h1>
+
+        <nav>
+            <button onclick="showSection('bios')">Team Bios</button>
+            <button onclick="showSection('vision')">Team Vision</button>
+        </nav>
+    </div>
 </header>
 
 <!-- Team bios section (default section) -->
@@ -46,10 +47,19 @@
     </div>
 </div>
 
+<section class="moodboard-section">
+    <div class="moodboard-card">
+        <h2>Our Mood Board</h2>
+        <img src="img/moodboard.png" alt="Mood Board" class="moodboard-image">
+    </div>
+</section>
+
 <!-- Team vision/mission statement section (hidden by default) -->
 <div id="vision" class="container" style="display: none;">
     <h2>Our Mission Statement</h2>
-    <p>We strive to create a collaborative, inclusive, and innovative environment where team members feel empowered to push boundaries and achieve excellence in their craft. Our mission is to deliver high-quality solutions that meet and exceed our clients' expectations.</p>
+    <p>We strive to create a an innovative environment where everyone will feel joyful and empowered to push boundaries and achieve excellence in software engineering! Our mission is to deliver A high quality restaurant app that will meet and exceed our clients' expectations.</p>
+    <img src="img/restaurant.jpg" alt="Restaurant" class="restaurant-image">
+        
 </div>
 
 <script src="script.js"></script> <!-- Link to external JavaScript file -->
