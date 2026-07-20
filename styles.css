@@ -25,6 +25,13 @@ header nav {
     margin-top: 10px;
 }
 
+.profile-photo {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
 header nav button {
     background: #007BFF;
     color: white;
