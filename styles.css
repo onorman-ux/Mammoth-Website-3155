@@ -1,90 +1,277 @@
-/* General page styling */
+/* Minimal Steampunk Theme */
+
+* {
+    box-sizing: border-box;
+}
+
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
     margin: 0;
-    padding: 0;
+    background-color: #2b1c13;
+    color: #ead9b5;
+    font-family: Georgia, "Times New Roman", serif;
+    line-height: 1.6;
 }
 
-/* Header section styling */
+/* Header */
+
 header {
-    background: #333;
-    color: #fff;
-    padding: 10px 0;
+    background-color: #17100b;
     text-align: center;
+    padding: 30px 20px;
+    border-top: 5px solid #a7793d;
+    border-bottom: 5px solid #a7793d;
 }
 
-/* Styling for team logo image */
-.team-logo {
-    width: 150px; /* Adjust the size as needed */
-    margin-top: 10px;
+header h1 {
+    margin: 0;
+    color: #d1a35b;
+    font-size: 3rem;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 3px black;
 }
 
-/* Menu button styling */
-header nav {
-    margin-top: 10px;
+header p {
+    color: #d8c49b;
+    font-style: italic;
 }
 
-header nav button {
-    background: #007BFF;
-    color: white;
-    border: none;
-    padding: 10px 15px;
-    border-radius: 5px;
-    cursor: pointer;
-    margin: 0 5px;
-}
+/* Navigation */
 
-header nav button:hover {
-    background: #0056b3;
-}
-
-/* Flex container for team bios and vision sections */
-.container {
-    width: 80%;
-    margin: 20px auto;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-}
-
-/* Card styling for individual team bios */
-.card {
-    background: white;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    margin: 10px;
-    padding: 20px;
-    flex: 1 1 calc(30% - 40px);
+nav {
+    background-color: #3a271b;
+    padding: 12px;
     text-align: center;
-    transition: transform 0.2s;
+    border-bottom: 2px solid #7d4d2a;
 }
 
-.card:hover {
-    transform: scale(1.05);
+nav a {
+    color: #d4aa64;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #fff0c8;
+    text-decoration: underline;
+}
+
+/* Main page layout */
+
+main {
+    width: 90%;
+    max-width: 1050px;
+    margin: 35px auto;
+}
+
+section {
+    margin-bottom: 35px;
+}
+
+h1,
+h2,
+h3 {
+    color: #cca05b;
 }
 
 h2 {
-    margin: 0 0 10px;
+    border-bottom: 2px solid #9b6237;
+    padding-bottom: 7px;
 }
 
-/* Initially hide bio details */
-.bio {
-    display: none;
-    margin-top: 10px;
-    color: #555;
+/* Team member and bio cards */
+
+.bio,
+.bio-card,
+.member,
+.member-card,
+.profile,
+.profile-card,
+.team-member {
+    background-color: #422c1e;
+    border: 2px solid #a7793d;
+    border-radius: 7px;
+    padding: 22px;
+    margin: 22px 0;
+
+    box-shadow:
+        5px 5px 10px rgba(0, 0, 0, 0.45),
+        inset 0 0 10px rgba(196, 147, 73, 0.08);
+
+    transition: transform 0.2s, border-color 0.2s;
 }
 
-/* Button styling */
-button {
-    background: #007BFF;
-    color: white;
-    border: none;
-    padding: 10px 15px;
-    border-radius: 5px;
+.bio:hover,
+.bio-card:hover,
+.member:hover,
+.member-card:hover,
+.profile:hover,
+.profile-card:hover,
+.team-member:hover {
+    transform: translateY(-3px);
+    border-color: #d1a35b;
+}
+
+/* Team layout */
+
+.team,
+.team-grid,
+.members,
+.bio-container,
+.profile-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 22px;
+}
+
+/* Profile images */
+
+.bio img,
+.bio-card img,
+.member img,
+.member-card img,
+.profile img,
+.profile-card img,
+.team-member img {
+    display: block;
+    width: 170px;
+    height: 170px;
+    margin: 0 auto 18px;
+    object-fit: cover;
+
+    border: 4px solid #a7793d;
+    border-radius: 50%;
+
+    filter: sepia(30%);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+}
+
+/* Buttons */
+
+button,
+.btn,
+.button {
+    background: linear-gradient(#c99a50, #8b572f);
+    color: #1b110b;
+
+    border: 2px solid #ddb76f;
+    border-radius: 4px;
+
+    padding: 10px 18px;
+
+    font-family: Georgia, "Times New Roman", serif;
+    font-weight: bold;
+
     cursor: pointer;
+    box-shadow: 0 4px 0 #4e2d1c;
+
+    transition: transform 0.2s, filter 0.2s;
 }
 
-button:hover {
-    background: #0056b3;
+button:hover,
+.btn:hover,
+.button:hover {
+    transform: translateY(-2px);
+    filter: brightness(1.15);
+}
+
+/* Mission statement and team rules */
+
+.mission,
+.mission-statement,
+.team-vision,
+.vision,
+.rules,
+.team-rules {
+    background-color: #d8c394;
+    color: #2c1b11;
+
+    border: 4px double #8b572f;
+    border-radius: 5px;
+
+    padding: 28px;
+    margin: 35px 0;
+
+    box-shadow: 5px 7px 12px rgba(0, 0, 0, 0.45);
+}
+
+.mission h2,
+.mission-statement h2,
+.team-vision h2,
+.vision h2,
+.rules h2,
+.team-rules h2 {
+    color: #62391f;
+    border-bottom-color: #8b572f;
+}
+
+/* Moodboard */
+
+.moodboard,
+.mood-board,
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+    gap: 12px;
+    margin-top: 20px;
+}
+
+.moodboard img,
+.mood-board img,
+.gallery img {
+    width: 100%;
+    height: 140px;
+    object-fit: cover;
+
+    border: 3px solid #a7793d;
+    border-radius: 4px;
+
+    filter: sepia(25%);
+    transition: transform 0.2s;
+}
+
+.moodboard img:hover,
+.mood-board img:hover,
+.gallery img:hover {
+    transform: scale(1.03);
+}
+
+/* Regular links */
+
+a {
+    color: #d4aa64;
+}
+
+a:hover {
+    color: #f0d9a7;
+}
+
+/* Footer */
+
+footer {
+    background-color: #17100b;
+    color: #d8c49b;
+
+    text-align: center;
+    padding: 18px;
+
+    border-top: 4px solid #a7793d;
+}
+
+/* Mobile layout */
+
+@media (max-width: 600px) {
+    header h1 {
+        font-size: 2rem;
+    }
+
+    nav a {
+        display: block;
+        margin: 7px 0;
+    }
+
+    main {
+        width: 94%;
+    }
 }
